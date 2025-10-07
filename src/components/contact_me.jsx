@@ -1,3 +1,4 @@
+import { useForm, ValidationError } from "@formspree/react";
 import Facebook from "../assets/facebook.png";
 import Github from "../assets/github.png";
 import LinkedIn from "../assets/linkedin.png";
@@ -21,10 +22,6 @@ const Contact = () => {
 		</div>
 	);
 };
-// Make sure to run npm install @formspree/react
-// For more help visit https://formspr.ee/react-help
-import React from "react";
-import { useForm, ValidationError } from "@formspree/react";
 
 function ContactForm() {
 	const [state, handleSubmit] = useForm("myzndevl");
@@ -107,7 +104,6 @@ const ContactMe = () => {
 			<h2>Contact Me</h2>
 			<div>
 				<ContactForm />
-
 				<Contact />
 			</div>
 			<SocialMedia />
