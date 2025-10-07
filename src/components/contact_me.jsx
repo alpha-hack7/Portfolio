@@ -21,28 +21,50 @@ const Contact = () => {
 		</div>
 	);
 };
-const Email = () => {
+// Make sure to run npm install @formspree/react
+// For more help visit https://formspr.ee/react-help
+import React from "react";
+import { useForm, ValidationError } from "@formspree/react";
+
+function ContactForm() {
+	const [state, handleSubmit] = useForm("myzndevl");
+	if (state.succeeded) {
+		return <p>Thanks for joining!</p>;
+	}
 	return (
-		<div className="email">
-			<label htmlFor="email">Email:</label>
-			<input type="email" name="email" id="email" placeholder="Email" />
-		</div>
+		<form onSubmit={handleSubmit}>
+			<div className="email">
+				<label htmlFor="email">Email Address</label>
+				<input
+					id="email"
+					type="email"
+					name="email"
+					placeholder="Email Address"
+				/>
+				<ValidationError prefix="Email" field="email" errors={state.errors} />
+			</div>
+			<div className="message">
+				<label htmlFor="message">Message: </label>
+				<textarea
+					id="message"
+					name="message"
+					placeholder="Type your message here ...."
+					cols={30}
+					rows={10}
+				/>
+				<ValidationError
+					prefix="Message"
+					field="message"
+					errors={state.errors}
+				/>
+			</div>
+			<button type="submit" disabled={state.submitting}>
+				Submit
+			</button>
+		</form>
 	);
-};
-const Message = () => {
-	return (
-		<div className="message">
-			<label htmlFor="message">Message:</label>
-			<textarea
-				name="message"
-				id="message"
-				cols="30"
-				rows="10"
-				placeholder="Enter your message here ...."
-			></textarea>
-		</div>
-	);
-};
+}
+
 const SocialMedia = () => {
 	return (
 		<div className="social-media">
@@ -84,11 +106,8 @@ const ContactMe = () => {
 		<div className="contact" id="contact">
 			<h2>Contact Me</h2>
 			<div>
-				<div className="form">
-					<Email />
-					<Message />
-					<button type="submit">Submit</button>
-				</div>
+				<ContactForm />
+
 				<Contact />
 			</div>
 			<SocialMedia />

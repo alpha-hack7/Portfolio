@@ -311,12 +311,12 @@ div#skill:hover div {
 	flex-wrap: wrap;
 	gap: 50px;
 }
-.form {
+form {
 	width: 700px;
 	padding: 30px;
 }
 @media (max-width: 768px) {
-	.form {
+	form {
 		width: 450px;
 	}
 }
@@ -348,7 +348,7 @@ div#skill:hover div {
 	outline: none;
 	border: none;
 }
-.form button {
+form button {
 	padding: 10px 20px;
 	border-radius: 10px;
 	cursor: pointer;
@@ -356,7 +356,7 @@ div#skill:hover div {
 	font-size: 1rem;
 	margin-top: 10px;
 }
-.form button:hover {
+form button:hover {
 	background-color: #555;
 	transition: background 0.5s;
 }
