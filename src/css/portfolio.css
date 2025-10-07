@@ -14,6 +14,17 @@ nav {
 	left: 0;
 	right: 0;
 }
+nav.open {
+	width: 250px;
+	opacity: 0.9;
+	background-color: #f4f4f4;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 1.5rem;
+	padding: 3rem 2rem;
+}
 nav a {
 	margin: 0 15px;
 	text-decoration: none;
@@ -25,6 +36,45 @@ nav a:hover {
 nav a.active {
 	font-weight: bold;
 	color: #007bff;
+}
+.hamburger {
+	position: fixed;
+	display: none;
+	flex-direction: column;
+	cursor: pointer;
+	background-color: aliceblue;
+	padding: 10px;
+	border-radius: 10px;
+	top: 15px;
+	right: 20px;
+	z-index: 101;
+}
+.hamburger.open {
+	background-color: #ccc;
+}
+.hamburger.open .line:nth-child(2) {
+	opacity: 0;
+}
+.hamburger.open .line:nth-child(1) {
+	transform: translateY(8px) rotate(45deg);
+}
+.hamburger.open .line:nth-child(3) {
+	transform: translateY(-8px) rotate(-45deg);
+}
+.line {
+	width: 25px;
+	height: 2px;
+	background-color: #333;
+	margin: 3px 0;
+	border-radius: 2px;
+}
+@media (max-width: 768px) {
+	.hamburger {
+		display: flex;
+	}
+	nav {
+		display: none;
+	}
 }
 /* ***** HeroSection **** */
 .hero-section {
@@ -42,7 +92,6 @@ nav a.active {
 	gap: 30px;
 	justify-content: center;
 	height: 70vh;
-	/* color: #d3d1d1; */
 	color: #333;
 	text-shadow: 0 0 5px cyan;
 }
@@ -55,7 +104,7 @@ nav a.active {
 	font-size: 1.25rem;
 }
 article {
-	width: 250px;
+	min-width: 250px;
 	height: 250px;
 	box-shadow: inset 0 0 20px cyan;
 	border-radius: 20px;
@@ -64,8 +113,10 @@ article {
 	flex-direction: column;
 	justify-content: center;
 }
-article h2 {
+.my-philosophy {
 	text-shadow: 0 0 30px #fff;
+	font-size: 1.75rem;
+	line-height: 1.4;
 }
 article div {
 	display: none;
@@ -79,12 +130,41 @@ article:hover div {
 	flex-direction: column;
 }
 .all-me {
+	width: 1300px;
 	display: flex;
-	width: 100%;
+	overflow-x: auto;
 	justify-content: center;
 	gap: 10px;
 	position: absolute;
 	bottom: 10px;
+}
+.left-arrow img {
+	transform: rotate(180deg);
+	left: 0;
+}
+.left-arrow,
+.right-arrow {
+	position: absolute;
+	top: 50%;
+	right: 10px;
+	width: 50px;
+	height: 50px;
+	background-color: cyan;
+	border-radius: 20px;
+	display: none; /* Incomplete */
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+}
+.left-arrow img,
+.right-arrow img {
+	width: 100%;
+	height: 100%;
+}
+@media (max-width: 768px) {
+	.welcome-info {
+		width: 90%;
+	}
 }
 
 /* ***** About Me Section **** */
@@ -135,16 +215,39 @@ section {
 	border-radius: 10px;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+@media (max-width: 768px) {
+	.about-me > div {
+		flex-direction: column;
+		align-items: center;
+	}
+	.about-me div#nav {
+		padding-top: 30px;
+	}
+	.about-me-list {
+		width: 1200px;
+		overflow-x: auto;
+	} /* Enable horizontal scrolling */
+	.about-me img {
+		margin-left: 0;
+		width: 100%;
+		height: auto;
+	}
+	section {
+		width: 90%;
+		margin: 20px auto;
+	}
+}
 /* ***** My Skills Section **** */
 .my-skills {
 	padding-left: 20px;
-	height: 500px;
+	min-height: 20vh;
 }
 .my-skills h2 {
 	padding: 50px 0;
 }
 .skills {
 	display: flex;
+	flex-wrap: wrap;
 	gap: 20px;
 	justify-content: center;
 }
@@ -173,7 +276,7 @@ div#skill:hover div {
 /* ***** My Projects Section **** */
 
 .my-projects {
-	height: 500px;
+	min-height: 20vh;
 	padding-left: 20px;
 }
 .my-projects h2 {
@@ -183,6 +286,7 @@ div#skill:hover div {
 	width: 100%;
 	display: flex;
 	justify-content: center;
+	flex-wrap: wrap;
 	gap: 15px;
 }
 .project {
@@ -204,11 +308,17 @@ div#skill:hover div {
 }
 .contact > div {
 	display: flex;
+	flex-wrap: wrap;
 	gap: 50px;
 }
 .form {
-	width: 50%;
+	width: 700px;
 	padding: 30px;
+}
+@media (max-width: 768px) {
+	.form {
+		width: 450px;
+	}
 }
 .email,
 .message {
@@ -257,6 +367,7 @@ div#skill:hover div {
 	display: flex;
 	justify-content: center;
 	width: 100%;
+	border-bottom: 2px solid #333;
 }
 .smedia {
 	display: flex;

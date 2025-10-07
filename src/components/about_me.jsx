@@ -28,7 +28,7 @@ const AboutMe = () => {
 	};
 	return (
 		<>
-			<div className="about-me">
+			<div className="about-me" id="about">
 				<h1>Hi, Alpha Here!</h1>
 				<div>
 					<img src="Alpha 1.jpg" alt="my picture" />

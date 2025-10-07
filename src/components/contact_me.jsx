@@ -1,3 +1,8 @@
+import Facebook from "../assets/facebook.png";
+import Github from "../assets/github.png";
+import LinkedIn from "../assets/linkedin.png";
+import Tiktok from "../assets/tiktok.png";
+
 const Contact = () => {
 	return (
 		<div className="contact-info">
@@ -41,25 +46,42 @@ const Message = () => {
 const SocialMedia = () => {
 	return (
 		<div className="social-media">
-			<Smedia name="Tiktok" src="github.png" />
-			<Smedia name="Facebook" src="github.png" />
-			<Smedia name="Github" src="github.png" />
-			<Smedia name="LinkedIn" src="github.png" />
+			<Smedia
+				name="Tiktok"
+				src={Tiktok}
+				dest="https://www.tiktok.com/@alpha.indeje"
+			/>
+			<Smedia
+				name="Facebook"
+				src={Facebook}
+				dest="https://www.facebook.com/profile.php?id=100093092425767"
+			/>
+			<Smedia
+				name="Github"
+				src={Github}
+				dest="https://github.com/alpha-hack7"
+			/>
+			<Smedia
+				name="LinkedIn"
+				src={LinkedIn}
+				dest="https://www.linkedin.com/feed/"
+			/>
 		</div>
 	);
 };
-const Smedia = ({ name, src }) => {
+const Smedia = ({ name, src, dest }) => {
 	return (
 		<div className="smedia">
-			<img src={src} alt={name} />
-			<a href="#">{name}</a>
+			<a href={dest} rel="noopener noreferrer">
+				<img src={src} alt={name} />
+			</a>
 		</div>
 	);
 };
 
 const ContactMe = () => {
 	return (
-		<div className="contact">
+		<div className="contact" id="contact">
 			<h2>Contact Me</h2>
 			<div>
 				<div className="form">
