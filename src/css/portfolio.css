@@ -179,11 +179,9 @@ article:hover div {
 	.all-me {
 		width: 80%;
 	}
-	.right-arrow {
-		right: 5px;
-	}
+	.right-arrow,
 	.left-arrow {
-		left: 5px;
+		display: none;
 	}
 }
 
