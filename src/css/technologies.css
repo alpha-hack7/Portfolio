@@ -1,0 +1,50 @@
+/* ***** My Skills Section **** */
+.my-skills {
+	padding-left: 20px;
+	min-height: 20vh;
+}
+.my-skills h2 {
+	padding: 50px 0;
+}
+.all-skills {
+	width: 90%;
+	overflow-x: auto;
+	scrollbar-color: #007 transparent;
+	scrollbar-width: auto;
+	margin: 0 auto;
+}
+.skills {
+	display: flex;
+	width: max-content;
+	gap: 20px;
+	margin-bottom: 30px;
+}
+div#skill {
+	height: 250px;
+	width: 250px;
+	border: 2px solid #333;
+	border-radius: 30px;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+div#skill img {
+	height: 70%;
+	width: 70%;
+	transition: opacity 0.5s ease;
+}
+div#skill div {
+	display: none;
+}
+div#skill:hover div {
+	display: flex;
+	flex-direction: column;
+	padding: 20px;
+	text-align: center;
+	position: absolute;
+	top: 50px;
+}
+div#skill:hover img {
+	opacity: 0.1;
+}

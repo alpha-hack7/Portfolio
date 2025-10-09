@@ -1,9 +1,9 @@
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import "../css/portfolio.css";
 
 const Navigation = () => {
 	const [activeSection, setActiveSection] = useState("home");
-	const sections = ["home", "about", "projects", "contact"];
+	const sections = ["home", "about", "projects", "skills", "contact"];
 
 	useEffect(() => {
 		const options = {
@@ -42,6 +42,9 @@ const Navigation = () => {
 					className={activeSection === "projects" && "active"}
 				>
 					My Projects
+				</a>
+				<a href="#skills" className={activeSection === "skills" && "active"}>
+					My Skills
 				</a>
 				<a href="#contact" className={activeSection === "contact" && "active"}>
 					Contact Me

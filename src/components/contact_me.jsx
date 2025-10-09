@@ -3,6 +3,7 @@ import Facebook from "../assets/facebook.png";
 import Github from "../assets/github.png";
 import LinkedIn from "../assets/linkedin.png";
 import Tiktok from "../assets/tiktok.png";
+import "../css/contact.css";
 
 const Contact = () => {
 	return (
