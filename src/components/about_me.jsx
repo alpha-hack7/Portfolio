@@ -33,63 +33,65 @@ const AboutMe = () => {
 				<div>
 					<img src="Alpha 1.jpg" alt="my picture" />
 					<div id="nav">
-						<ul className="about-me-list">
-							<li>
-								<a
-									href="#"
-									onClick={(e) => {
-										e.preventDefault();
-										setSection("about-me");
-									}}
-								>
-									About Me
-								</a>
-							</li>
-							<li>
-								<a
-									href="#"
-									onClick={(e) => {
-										e.preventDefault();
-										setSection("education");
-									}}
-								>
-									Education
-								</a>
-							</li>
-							<li>
-								<a
-									href="#"
-									onClick={(e) => {
-										e.preventDefault();
-										setSection("skills");
-									}}
-								>
-									Skills
-								</a>
-							</li>
-							<li>
-								<a
-									href="#"
-									onClick={(e) => {
-										e.preventDefault();
-										setSection("personal-values");
-									}}
-								>
-									Personal Values
-								</a>
-							</li>
-							<li>
-								<a
-									href="#"
-									onClick={(e) => {
-										e.preventDefault();
-										setSection("interests-hobbies");
-									}}
-								>
-									Interests/Hobbies
-								</a>
-							</li>
-						</ul>
+						<div className="list">
+							<ul className="about-me-list">
+								<li>
+									<a
+										href="#"
+										onClick={(e) => {
+											e.preventDefault();
+											setSection("about-me");
+										}}
+									>
+										About Me
+									</a>
+								</li>
+								<li>
+									<a
+										href="#"
+										onClick={(e) => {
+											e.preventDefault();
+											setSection("education");
+										}}
+									>
+										Education
+									</a>
+								</li>
+								<li>
+									<a
+										href="#"
+										onClick={(e) => {
+											e.preventDefault();
+											setSection("skills");
+										}}
+									>
+										Skills
+									</a>
+								</li>
+								<li>
+									<a
+										href="#"
+										onClick={(e) => {
+											e.preventDefault();
+											setSection("personal-values");
+										}}
+									>
+										Personal Values
+									</a>
+								</li>
+								<li>
+									<a
+										href="#"
+										onClick={(e) => {
+											e.preventDefault();
+											setSection("interests-hobbies");
+										}}
+									>
+										Interests/Hobbies
+									</a>
+								</li>
+							</ul>
+						</div>
 						{renderSection()}
 					</div>
 				</div>
