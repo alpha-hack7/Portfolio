@@ -8,7 +8,7 @@ function HeroSection() {
 					<h1>
 						Hi, I am <span>Alpha Indeje</span>
 					</h1>
-					<h3>A completely different perception ---&gt; to be changed</h3>
+					<h3>Becoming something greater &mdash; one line of code at a time</h3>
 					<h2 className="my-philosophy">
 						<span id="1" style={{ color: "yellow" }}>
 							Conceptualize.{" "}
@@ -27,47 +27,49 @@ function HeroSection() {
 						My CV
 					</a>
 				</div>
-				<div className="all-me">
-					<div className="left-arrow">
-						<img src={Image} alt="navigation arrow" />
-					</div>
-					<article>
-						<h2>A child of God</h2>
-						<div>
-							But as many as received Him, He gave them the power to be called
-							sons of God <i>John 1:12</i>
+				<div className="me-container">
+					<div className="all-me">
+						<div className="left-arrow">
+							<img src={Image} alt="navigation arrow" />
 						</div>
-					</article>
-					<article>
-						<h2>A child of God</h2>
-						<div>
-							But as many as received Him, He gave them the power to be called
-							sons of God <i>John 1:12</i>
+						<article>
+							<h2>A child of God</h2>
+							<div>
+								But as many as received Him, He gave them the power to be called
+								sons of God <i>John 1:12</i>
+							</div>
+						</article>
+						<article>
+							<h2>My Life Will Honor you, Jesus</h2>
+							<div>
+								For to me, to live is Christ and to die is gain{" "}
+								<i>Philippians 1:21</i>
+							</div>
+						</article>
+						<article>
+							<h2>The King that owns me, made me and knows me</h2>
+							<div>
+								For we are His workmanship, created in Christ Jesus for good
+								works,
+							</div>
+						</article>
+						<article>
+							<h2>A child of God</h2>
+							<div>
+								But as many as received Him, He gave them the power to be called
+								sons of God <i>John 1:12</i>
+							</div>
+						</article>
+						<article>
+							<h2>A child of God</h2>
+							<div>
+								But as many as received Him, He gave them the power to be called
+								sons of God <i>John 1:12</i>
+							</div>
+						</article>
+						<div className="right-arrow">
+							<img src={Image} alt="navigation arrow" />
 						</div>
-					</article>
-					<article>
-						<h2>A child of God</h2>
-						<div>
-							But as many as received Him, He gave them the power to be called
-							sons of God <i>John 1:12</i>
-						</div>
-					</article>
-					<article>
-						<h2>A child of God</h2>
-						<div>
-							But as many as received Him, He gave them the power to be called
-							sons of God <i>John 1:12</i>
-						</div>
-					</article>
-					<article>
-						<h2>A child of God</h2>
-						<div>
-							But as many as received Him, He gave them the power to be called
-							sons of God <i>John 1:12</i>
-						</div>
-					</article>
-					<div className="right-arrow">
-						<img src={Image} alt="navigation arrow" />
 					</div>
 				</div>
 			</div>
