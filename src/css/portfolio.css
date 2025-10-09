@@ -33,6 +33,11 @@ nav a {
 nav a:hover {
 	text-decoration: underline;
 }
+.active {
+	font-weight: 500;
+	color: #535bf2;
+	text-decoration: inherit;
+}
 nav a.active {
 	font-weight: bold;
 	color: #007bff;
