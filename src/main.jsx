@@ -7,6 +7,7 @@ import MyProjects from "./components/my_projects";
 import Technologies from "./components/skillset";
 import ContactMe from "./components/contact_me";
 import HeroSection from "./components/herosection";
+import Footer from "./components/footer";
 
 createRoot(document.getElementById("root")).render(
 	<StrictMode>
@@ -16,5 +17,6 @@ createRoot(document.getElementById("root")).render(
 		<MyProjects />
 		<Technologies />
 		<ContactMe />
+		<Footer />
 	</StrictMode>
 );

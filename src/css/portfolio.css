@@ -284,3 +284,25 @@ section {
 	padding: 20px;
 	line-height: 2;
 }
+
+/* ***** Footer Section **** */
+
+.footer {
+	padding: 20px 0;
+	text-align: center;
+}
+.footer h3 {
+	margin: 10px 0;
+}
+.footer h3 span#student {
+	color: #1e3a8a;
+}
+.footer h3 span#craftsman {
+	color: #cc5500;
+}
+.footer h3 span#man {
+	color: #1c1c1c;
+}
+.footer p {
+	margin: 5px 0;
+}
